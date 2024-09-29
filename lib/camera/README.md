@@ -1,0 +1,1 @@
+A simple camera app which is supported on Android, iOS, and Web.
