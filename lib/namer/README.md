@@ -1,0 +1,1 @@
+A simple app which produces random names.
