@@ -46,22 +46,24 @@ class _CameraAppState extends State<CameraApp> {
     }
     return Directionality(
       textDirection: TextDirection.ltr,
-      child: Scaffold(
-        appBar: AppBar(title: const Text('Camera App')),
-        body: Stack(
-          children: [
-            CameraPreview(_controller!),
-            Positioned(
-              bottom: 20,
-              right: 20,
-              child: FloatingActionButton(
-                onPressed: () async {
-                  await _controller?.takePicture();
-                },
-                child: const Icon(Icons.camera),
+      child: MaterialApp(
+        home: Scaffold(
+          appBar: AppBar(title: const Text('Camera App')),
+          body: Stack(
+            children: [
+              CameraPreview(_controller!),
+              Positioned(
+                bottom: 20,
+                right: 20,
+                child: FloatingActionButton(
+                  onPressed: () async {
+                    await _controller?.takePicture();
+                  },
+                  child: const Icon(Icons.camera),
+                ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );
